@@ -5,21 +5,26 @@ AV.init({
 const vm = new Vue({
 	el: '#app',
 	data: {
-		lst: [],
+		lst: JSON.parse(localStorage.lst || '[]'),
 		showEditor: false,
 		key: '',
 		name: '',
-		url: ''
+		url: '',
+		loading: false
 	},
 	methods: {
 		load() {
+			this.loading = true
 			const q = new AV.Query('lst')
 			q.find().then(lst => {
-				this.lst = []
+				const tmpLst = []
 				for (let i of lst) {
 					const tmp = [i.get('name'), i.get('url')]
-					this.lst.push(tmp)
+					tmpLst.push(tmp)
 				}
+				this.lst = tmpLst
+				localStorage.lst = JSON.stringify(this.lst)
+				this.loading = false
 			})
 		},
 		add() {

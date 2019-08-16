@@ -21,6 +21,7 @@
 				</div>
 			</a><br />
 		</span>
+		<p v-if="loading">Loading...</p>
 		<transition name="menuTrans">
 			<div class="editor" v-show="showEditor" @click.stop>
 				<!-- 管理员id<input v-model="key" /><br /> -->
