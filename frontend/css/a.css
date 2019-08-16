@@ -2,6 +2,12 @@ body{
 	/* margin-bottom: 0; */
 	margin:0;
 }
+.url{
+	overflow: hidden;
+}
+.url:hover{
+	overflow: visible;
+}
 .editor{
 	position: absolute;
 	top: 0;
