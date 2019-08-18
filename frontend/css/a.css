@@ -1,6 +1,23 @@
 body{
 	/* margin-bottom: 0; */
-	margin:0;
+	margin: 0;
+}
+.b1{
+	width: 90%;
+	box-sizing: border-box;
+}
+.container{
+	width: 37%;
+	display: inline-block;
+	box-sizing: border-box;
+	overflow-x: hidden;
+	overflow-y: auto;
+	height: 100%;
+}
+@media screen and (orientation: portrait){
+	.container{
+		width: 90%;
+	}
 }
 .url{
 	overflow: hidden;
