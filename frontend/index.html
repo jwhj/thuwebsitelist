@@ -13,17 +13,17 @@
 <body>
 	<div id="app" class="frm" @touchmove.prevent @click="showEditor=false">
 		<!-- <div class="container" @touchmove.stop> -->
-		<span v-for="j of 3">
-			<span v-for="i of lst">
-				<a class="btn b1" style="display:inline-block;margin-top:5px;color:inherit;text-decoration:none"
-					target="_blank" :href="i[1]">
-					{{i[0]}}<br />
-					<div class="url">
-						{{i[1]}}
-					</div>
-				</a><br />
-			</span>
+		<!-- <span v-for="j of 3"> -->
+		<span v-for="i of lst">
+			<a class="btn b1" style="display:inline-block;margin-top:5px;color:inherit;text-decoration:none"
+				target="_blank" :href="i[1]">
+				{{i[0]}}<br />
+				<div class="url">
+					{{i[1]}}
+				</div>
+			</a><br />
 		</span>
+		<!-- </span> -->
 		<!-- </div> -->
 		<p v-if="loading">Loading...</p>
 		<transition name="menuTrans">
