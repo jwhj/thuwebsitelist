@@ -3,7 +3,7 @@ body{
 	margin: 0;
 }
 .b1{
-	width: 90%;
+	width: 33%;
 	box-sizing: border-box;
 }
 .container{
@@ -15,8 +15,11 @@ body{
 	height: 100%;
 }
 @media screen and (orientation: portrait){
-	.container{
+	/* .container{
 		width: 90%;
+	} */
+	.b1{
+		width: 80%;
 	}
 }
 .url{
@@ -26,7 +29,7 @@ body{
 	overflow: visible;
 }
 .editor{
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -36,7 +39,7 @@ body{
 	color: #222;
 }
 .editorBtn{
-	position: absolute;
+	position: fixed;
 	right: 0;
 	bottom: 0;
 	width: 70px;
