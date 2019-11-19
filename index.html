@@ -6,8 +6,9 @@
 		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
 	<link rel="stylesheet" href="css/plm.css" />
 	<link rel="stylesheet" href="css/a.css" />
-	<script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3.15.0/dist/av-min.js"></script>
+	<script src="lib/vue.min.js"></script>
+	<script src="lib/av-min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/upup@latest/dist/upup.min.js"></script>
 </head>
 
 <body>
@@ -37,6 +38,21 @@
 		<div class="editorBtn" @click.stop="showEditor=!showEditor"></div>
 	</div>
 	<script src="js/index.js"></script>
+	<script>
+		UpUp.start({
+			'content-url': 'index.html',
+			'assets': [
+				'/',
+				'/index.html',
+				'lib/vue.min.js',
+				'lib/av-min.js',
+				'js/index.js',
+				'css/a.css',
+				'css/plm.css'
+			],
+			'cache-version': 1
+		});
+	</script>
 </body>
 
 </html>
