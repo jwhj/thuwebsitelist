@@ -42,16 +42,17 @@
 		UpUp.start({
 			'content-url': 'index.html',
 			'assets': [
-				'.',
-				'index.html',
-				'manifest.json',
-				'lib/vue.min.js',
-				'lib/av-min.js',
-				'js/index.js',
-				'css/a.css',
-				'css/plm.css'
+				'/',
+				'/index.html',
+				'/manifest.json',
+				'/lib/vue.min.js',
+				'/lib/av-min.js',
+				'/js/index.js',
+				'/css/a.css',
+				'/css/plm.css'
 			],
-			'cache-version': 2
+			'service-worker-url': '/upup.sw.min.js',
+			'cache-version': 3
 		})
 	</script>
 </body>
